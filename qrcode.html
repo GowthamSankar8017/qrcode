@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QrCode</title>
+    <link rel="stylesheet" href="./qrcode.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+
+
+    <div class="code">
+      <form action="#" id="frm">
+        <div class="form-group">
+          <label for="url">Enter Website Link</label>
+          <input type="url" id="url" placeholder="Enter Url" required />
+        </div>
+        <!--    -->
+        <div class="form-group">
+          <label for="size">Enter the Size</label>
+          <select id="size">
+            <option value="100">100x100</option>
+            <option value="200">200x200</option>
+            <option value="300">300x300</option>
+            <option value="400">400x400</option>
+          </select>
+        </div>
+        <!--  -->
+        <div class="form-color">
+          <label for="colorDark">colorDark</label>
+          <input type="color" id="colorDark" />
+        </div>
+
+        <div class="form-color">
+          <label for="colorLight">colorLight</label>
+          <input type="color" id="colorLight" value="#ffffff" />
+        </div>
+
+        <!--  -->
+        <button type="submit">Generate Qrcode</button>
+        <a href="#" id="save-pic" download>Save Picture</a>
+      </form>
+    </div>
+    
+    <div id="output">
+      <div id="coding">
+        <img src="./Untitled 1.png" alt="" />
+      </div>
+      <div id="loading">
+        <div id="spinner"></div>
+        <p>Please Wait...</p>
+      </div>
+    </div>
+
+    <script src="./qrcode.js"></script>
+  </body>
+</html>
